@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Marquee from 'react-fast-marquee';
 
 import Nav from './nav';
 import Triangle from './triangle';
@@ -67,6 +68,13 @@ export default function Home() {
         <Triangle className='-bottom-14 -left-64 rotate-[-25deg]' />
         <Triangle className='-right-80 bottom-14 w-[650px] rotate-[-240deg] object-cover' />
       </div>
+      <section className='-mt-8 border-y-[5px] border-black bg-secondary py-6 lg:py-10'>
+        <Marquee autoFill>
+          <span className='inline-block px-8 text-4xl text-white lg:text-5xl'>
+            $DREYFUS
+          </span>
+        </Marquee>
+      </section>
     </div>
   );
 }
