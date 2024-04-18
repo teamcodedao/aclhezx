@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import Nav from './nav';
 import Triangle from './triangle';
+import Hamburger from './hamburger';
 
 import alex1Img from './alex-1.png';
 import doubleTriangleImg from './double-triangle.png';
@@ -11,7 +12,7 @@ export default function Home() {
     <div className='min-h-screen overflow-hidden bg-primary'>
       <div className='relative mx-auto max-w-screen-desktop max-desktop:px-2'>
         <header className='relative z-10 pt-10'>
-          <div className='flex items-center gap-x-10 rounded-[28px] border-[5px] border-black bg-secondary p-6'>
+          <div className='flex items-center gap-x-10 rounded-[28px] border-[5px] border-black bg-secondary p-6 max-[500px]:multi-[`flex-wrap`]'>
             <div className='flex shrink-0 gap-x-3 [&>a:hover]:multi-[`bg-tertiary`] [&>a]:multi-[`border-[3px];border-black;rounded-xl;rounded-xl;bg-white;px-2;py-2;transition`]'>
               <a href={process.env.NEXT_PUBLIC_TWITTER_URL} target='_twitter'>
                 <img src='/twitter.svg' alt='' />
@@ -23,15 +24,18 @@ export default function Home() {
                 <img src='/chart.svg' alt='' />
               </a>
             </div>
-            <Nav />
-            <div className='ml-auto shrink-0'>
+            <Nav className='max-[967px]:hidden' />
+            <div className='ml-auto shrink-0 max-[500px]:multi-[`order-2;ml-0;w-full;mt-3;[&>a]:block;[&>a]:text-center`]'>
               <a
                 href={process.env.NEXT_PUBLIC_COIN_URL}
                 target='_buy'
-                className='inline-block rounded-2xl border-4 border-black bg-tertiary px-5 py-2 text-black hover:multi-[`bg-white;transition`] sm:text-2xl lg:px-7 lg:py-3 lg:text-4xl'
+                className='inline-block whitespace-nowrap rounded-2xl border-4 border-black bg-tertiary px-5 py-2 text-xl text-black hover:multi-[`bg-white;transition`] sm:text-2xl lg:px-7 lg:py-3 lg:text-4xl'
               >
                 BUY NOW
               </a>
+            </div>
+            <div className='hidden max-[967px]:multi-[`block`] max-[500px]:ml-auto'>
+              <Hamburger />
             </div>
           </div>
           <div className='relative mt-10 flex md:mt-16 lg:mt-24'>
