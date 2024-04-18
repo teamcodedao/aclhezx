@@ -4,6 +4,7 @@ import Marquee from 'react-fast-marquee';
 import Nav from './nav';
 import Triangle from './triangle';
 import Hamburger from './hamburger';
+import Copy from './copy';
 
 import alex1Img from './alex-1.png';
 import doubleTriangleImg from './double-triangle.png';
@@ -69,11 +70,23 @@ export default function Home() {
         <Triangle className='-right-80 bottom-14 w-[650px] rotate-[-240deg] object-cover' />
       </div>
       <section className='-mt-8 border-y-[5px] border-black bg-secondary py-6 lg:py-10'>
-        <Marquee autoFill>
+        <Marquee autoFill className='overflow-y-hidden'>
           <span className='inline-block px-8 text-4xl text-white lg:text-5xl'>
             $DREYFUS
           </span>
         </Marquee>
+      </section>
+      <section className='flex justify-center px-2 lg:px-0'>
+        <div className='flex overflow-hidden rounded-b-3xl border-[5px] border-t-0 border-black text-xl uppercase text-black lg:rounded-b-[2rem] lg:text-2xl'>
+          <div className='flex items-center gap-x-2 overflow-hidden bg-white p-3 lg:px-7 lg:py-6'>
+            <span className='shrink-0'>CA</span>
+            <span className='inline-block h-[23px] w-1 shrink-0 bg-black'></span>
+            <span className='inline-block overflow-hidden break-words'>
+              {process.env.NEXT_PUBLIC_COIN_ADDRESS}
+            </span>
+          </div>
+          <Copy text={process.env.NEXT_PUBLIC_COIN_ADDRESS} />
+        </div>
       </section>
     </div>
   );
