@@ -17,6 +17,9 @@ dependencies:
   react-dom:
     specifier: ^18
     version: 18.2.0(react@18.2.0)
+  react-fast-marquee:
+    specifier: ^1.6.4
+    version: 1.6.4(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@types/node':
@@ -43,6 +46,9 @@ devDependencies:
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.3
+  tailwindcss-multi:
+    specifier: ^0.3.26
+    version: 0.3.26
   typescript:
     specifier: ^5
     version: 5.4.5
@@ -2269,6 +2275,16 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-fast-marquee@1.6.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-LAgvhRmHdqaUQ8R5jCUwzEGFUIjnCCt3T3W8X7j7wF6DWe0SATlpP0JX1V0pp2qX3DYUezmn1Iz5AtRFdL2EWQ==}
+    peerDependencies:
+      react: '>= 16.8.0 || 18.0.0'
+      react-dom: '>= 16.8.0 || 18.0.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
@@ -2594,6 +2610,15 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: true
+
+  /tailwindcss-multi@0.3.26:
+    resolution: {integrity: sha512-PDql/wUS+Z5+hzndUzq7BPdq7Xa0Hu9c0mKr6CFMoreBYvpevv00bxOAlRMmzvCRgZtckwg9ja0HLkjxFOhv0Q==}
+    dependencies:
+      '@types/node': 20.12.7
+      tailwindcss: 3.4.3
+    transitivePeerDependencies:
+      - ts-node
     dev: true
 
   /tailwindcss@3.4.3:
