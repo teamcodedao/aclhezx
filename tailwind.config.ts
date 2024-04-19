@@ -21,6 +21,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('tailwindcss-multi')],
+  plugins: [
+    require('tailwindcss-multi'),
+    require('tailwindcss-mixins')
+  ],
 };
 export default config;

@@ -6,14 +6,18 @@ import Triangle from './triangle';
 import Hamburger from './hamburger';
 import Copy from './copy';
 import ListedOn from './listed-on';
+import Card from './card';
 
 import alex1Img from './alex-1.png';
+import alex2Img from './alex-2.png';
+import alex3Img from './alex-3.png';
 import doubleTriangleImg from './double-triangle.png';
+import clsx from 'clsx';
 
 export default function Home() {
   return (
     <div className='min-h-screen overflow-hidden bg-primary'>
-      <div className='relative mx-auto max-w-screen-desktop max-desktop:px-2'>
+      <div className='relative mx-auto max-w-screen-desktop max-desktop:px-5'>
         <header className='relative z-10 pt-10'>
           <div className='flex items-center gap-x-10 rounded-[28px] border-[5px] border-black bg-secondary p-6 max-[500px]:multi-[`flex-wrap`]'>
             <div className='flex shrink-0 gap-x-3 [&>a:hover]:multi-[`bg-tertiary`] [&>a]:multi-[`border-[3px];border-black;rounded-xl;rounded-xl;bg-white;px-2;py-2;transition`]'>
@@ -27,7 +31,7 @@ export default function Home() {
                 <img src='/chart.svg' alt='' />
               </a>
             </div>
-            <Nav className='max-[967px]:hidden' />
+            <Nav className='max-[991px]:hidden' />
             <div className='ml-auto shrink-0 max-[500px]:multi-[`order-2;ml-0;w-full;mt-3;[&>a]:block;[&>a]:text-center`]'>
               <a
                 href={process.env.NEXT_PUBLIC_COIN_URL}
@@ -90,6 +94,68 @@ export default function Home() {
         </div>
       </section>
       <ListedOn className='mt-10 lg:mt-16' />
+      <section
+        className={clsx(
+          'mx-auto mt-20 max-w-screen-desktop max-desktop:px-5 lg:mt-28',
+          'grid grid-cols-[repeat(auto-fill,minmax(var(--w),_1fr))] gap-x-5 gap-y-14 sm:gap-x-10 lg:gap-x-20 lg:gap-y-32',
+          '[--w:350px] lg:[--w:430px]',
+          'mixin/image:multi-[`flex;items-end`]',
+          'max-[779px]:[&>*:nth-child(3)]:order-last'
+        )}
+      >
+        <div className='mixin/image'>
+          <Image src={alex2Img} alt='' className='w-full' />
+        </div>
+        <Card
+          title='tokenomic'
+          position='right'
+          description={
+            <div>
+              <p>
+                $AcLhEzX is da hartfelt leeder of CHZ. His mishun is to bild bak
+                betta, to unify da divided, n to counter da wild claims . We’re
+                here to bring togetha all da Baze memes and support one anotha
+                thru da highs and lows, moke sure to stond by Briun far real
+                change!
+              </p>
+              <p>
+                Briun can naw count on his frenz lik Jesse, butt alzo, thankz to
+                his efforts, on a Bald CHZED communyti. No oane can stap a CHZED
+                team.
+              </p>
+            </div>
+          }
+          action={{
+            text: 'Supply: 100.000.000',
+            className: 'mt-auto',
+          }}
+        />
+        <Card
+          title='AcLhEzX mechanism'
+          description={
+            <div>
+              <p>
+                Reminder: we&apos;re more than just a meme, $aclhezx is the
+                first deflationary memecoin thanks to UniV3 fees.
+              </p>
+              <p>
+                This flywheel mechanism has already enabled us to make 35
+                buybacks to burn 5,41% of the total supply.
+              </p>
+              <p>Every day more $aclhezx goes out of circulation.</p>
+            </div>
+          }
+          action={{
+            text: 'buy $AcLhEzX',
+            href: process.env.NEXT_PUBLIC_COIN_URL,
+            target: '_buy',
+            className: 'mt-4 lg:mt-14',
+          }}
+        />
+        <div className='mixin/image'>
+          <Image src={alex3Img} alt='' className='w-full' />
+        </div>
+      </section>
     </div>
   );
 }

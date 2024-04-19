@@ -10,7 +10,7 @@ interface ListedOnProps extends React.ComponentProps<'section'> {}
 
 export default function ListedOn({className, ...rest}: ListedOnProps) {
   return (
-    <section {...rest} className={clsx(className, 'max-desktop:px-2')}>
+    <section {...rest} className={clsx(className, 'max-desktop:px-5')}>
       <h2 className='text-center text-5xl uppercase drop-shadow-normal md:text-6xl lg:text-[4rem]'>
         Listed On
       </h2>
