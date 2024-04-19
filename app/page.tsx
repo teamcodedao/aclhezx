@@ -96,7 +96,7 @@ export default function Home() {
       <ListedOn className='mt-10 lg:mt-16' />
       <section
         className={clsx(
-          'mx-auto mt-20 max-w-screen-desktop max-desktop:px-5 lg:mt-28',
+          'mx-auto mt-20 max-w-screen-desktop pb-20 max-desktop:px-5 lg:mt-28',
           'grid grid-cols-[repeat(auto-fill,minmax(var(--w),_1fr))] gap-x-5 gap-y-14 sm:gap-x-10 lg:gap-x-20 lg:gap-y-32',
           '[--w:350px] lg:[--w:430px]',
           'mixin/image:multi-[`flex;items-end`]',
@@ -153,9 +153,32 @@ export default function Home() {
           }}
         />
         <div className='mixin/image'>
-          <Image src={alex3Img} alt='' className='w-full' />
+          <Image
+            src={alex3Img}
+            alt=''
+            className='w-full min-[779px]:scale-[1.3]'
+          />
         </div>
       </section>
+      <div className='relative z-10 border-y-[5px] border-black bg-secondary py-3'></div>
+      <footer className='relative z-10 mb-16 mt-[-5.2rem] flex justify-center max-xl:px-5'>
+        <div
+          className={clsx(
+            'flex items-center gap-x-7 gap-y-3 rounded-2xl border-[5px] border-black bg-secondary px-8 py-5 lg:px-12 lg:py-9',
+            'max-[752px]:flex-wrap'
+          )}
+        >
+          <div className='shrink-0 rounded-xl border-[3px] border-black bg-white p-2 max-sm:hidden'>
+            <img src='/mail.svg' alt='' />
+          </div>
+          <a href='mailto:AcLhEzX@gmail.com' className='text-4xl uppercase'>
+            AcLhEzX@gmail.com
+          </a>
+          <div className='text-xl uppercase'>
+            © 2024 by AcLhEzX $AcLhEzX. All rights reserved.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
