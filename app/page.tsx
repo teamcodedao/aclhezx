@@ -5,6 +5,7 @@ import Nav from './nav';
 import Triangle from './triangle';
 import Hamburger from './hamburger';
 import Copy from './copy';
+import ListedOn from './listed-on';
 
 import alex1Img from './alex-1.png';
 import doubleTriangleImg from './double-triangle.png';
@@ -40,12 +41,12 @@ export default function Home() {
               <Hamburger />
             </div>
           </div>
-          <div className='relative mt-10 flex md:mt-16 lg:mt-24'>
+          <div className='lg: relative mt-10 flex md:mt-10 lg:mt-24'>
             <div className='flex grow flex-col justify-center max-[555px]:multi-[`absolute;inset-0`]'>
               <h1 className='text-7xl uppercase drop-shadow-normal md:text-8xl lg:text-9xl'>
                 AcLhEzX
               </h1>
-              <h4 className='mt-8 space-y-2 text-2xl uppercase md:text-3xl lg:mt-16 lg:text-4xl'>
+              <h4 className='lg: mt-8 space-y-2 text-2xl uppercase md:text-3xl lg:mt-10 lg:text-4xl'>
                 <p>Sey hallo tu da ceo of Chiliz</p>
                 <p>FiRsT DeFlATiOnaRy MemEcOiN On CHZ</p>
               </h4>
@@ -88,6 +89,7 @@ export default function Home() {
           <Copy text={process.env.NEXT_PUBLIC_COIN_ADDRESS} />
         </div>
       </section>
+      <ListedOn className='mt-10 lg:mt-16' />
     </div>
   );
 }
