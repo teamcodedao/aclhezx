@@ -23,7 +23,36 @@ export default function HowToBuy({className}: HowToBuyProps) {
         <h2 className='text-center text-5xl uppercase drop-shadow-normal md:text-6xl lg:text-[4rem]'>
           How to buy
         </h2>
-        <div>button</div>
+        <div
+          className={clsx(
+            'flex gap-x-4',
+            '[&>button]:multi-[`border-2;border-black;px-2;py-2;rounded-xl;bg-white;transition`]',
+            'hover:[&>button]:multi-[`bg-tertiary`]'
+          )}
+        >
+          <button
+            aria-label='Previous'
+            onClick={() => {
+              if (embla?.canScrollPrev()) {
+                return embla.scrollPrev();
+              }
+              embla?.scrollTo(embla.slideNodes().length - 1);
+            }}
+          >
+            <img src='/arrow.svg' alt='' className='rotate-[-170deg]' />
+          </button>
+          <button
+            aria-label='Next'
+            onClick={() => {
+              if (embla?.canScrollNext()) {
+                return embla.scrollNext();
+              }
+              embla?.scrollTo(0);
+            }}
+          >
+            <img src='/arrow.svg' alt='' className='rotate-[-10deg]' />
+          </button>
+        </div>
       </div>
       <div
         ref={emblaRef}
