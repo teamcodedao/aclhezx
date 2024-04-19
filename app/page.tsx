@@ -6,6 +6,7 @@ import Triangle from './triangle';
 import Hamburger from './hamburger';
 import Copy from './copy';
 import ListedOn from './listed-on';
+import HowToBuy from './how-to-buy';
 import Card from './card';
 
 import alex1Img from './alex-1.png';
@@ -100,6 +101,7 @@ export default function Home() {
           <Copy text={process.env.NEXT_PUBLIC_COIN_ADDRESS} />
         </div>
       </section>
+      <HowToBuy className='mt-12 lg:mt-20' />
       <ListedOn className='mt-10 lg:mt-16' />
       <section
         className={clsx(

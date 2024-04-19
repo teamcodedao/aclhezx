@@ -31,3 +31,17 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .embla {
+    @apply overflow-hidden;
+
+    .embla__container {
+      @apply grid gap-[var(--embla-gap,theme(spacing.5))] grid-flow-col;
+
+      .embla__slide {
+        @apply w-fit;
+      }
+    }
+  }
+}
