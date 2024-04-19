@@ -48,7 +48,14 @@ export default function Home() {
           <div className='lg: relative mt-10 flex md:mt-10 lg:mt-24'>
             <div className='flex grow flex-col justify-center max-[555px]:multi-[`absolute;inset-0`]'>
               <h1 className='text-7xl uppercase drop-shadow-normal md:text-8xl lg:text-9xl'>
-                AcLhEzX
+                {'AcLhEzX'.split('').map(word => (
+                  <span
+                    key={word}
+                    className='inline-block cursor-default transition hover:scale-110 hover:text-tertiary'
+                  >
+                    {word}
+                  </span>
+                ))}
               </h1>
               <h4 className='lg: mt-8 space-y-2 text-2xl uppercase md:text-3xl lg:mt-10 lg:text-4xl'>
                 <p>Sey hallo tu da ceo of Chiliz</p>
