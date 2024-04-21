@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-interface CardProps {
+interface CardProps extends React.ComponentProps<'article'> {
   title: string;
   description: React.ReactNode;
   position?: 'left' | 'right';
@@ -15,14 +15,15 @@ export default function Card({
   description,
   position = 'left',
   action,
+  className,
 }: CardProps) {
   const isActionAnchor = 'href' in action;
 
   return (
-    <article className='flex flex-col'>
+    <article className={clsx(className, 'flex flex-col')}>
       <h3
         className={clsx(
-          'text-7xl uppercase drop-shadow-normal lg:text-8xl xl:text-9xl',
+          'text-5xl uppercase !leading-normal drop-shadow-normal min-[390px]:text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl',
           {
             'text-right max-[779px]:text-left': position === 'right',
           }
@@ -56,7 +57,7 @@ export default function Card({
       >
         {isActionAnchor ? (
           <a href={action.href} target={action.target}>
-            {action.text}
+            <span className='inline-block px-5'>{action.text}</span>
           </a>
         ) : (
           <span>{action.text}</span>

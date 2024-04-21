@@ -20,12 +20,12 @@ export default function HowToBuy({className}: HowToBuyProps) {
   return (
     <section className={clsx(className)}>
       <div className='mx-auto flex max-w-screen-desktop items-end justify-between gap-x-5 max-desktop:px-5'>
-        <h2 className='text-center text-5xl uppercase drop-shadow-normal md:text-6xl lg:text-[4rem]'>
+        <h2 className='whitespace-nowrap text-center text-[2.7rem] uppercase drop-shadow-normal sm:text-5xl md:text-6xl lg:text-[4rem]'>
           How to buy
         </h2>
         <div
           className={clsx(
-            'flex gap-x-4',
+            'flex shrink-0 gap-x-4',
             '[&>button]:multi-[`border-2;border-black;px-2;py-2;rounded-xl;bg-white;transition`]',
             'hover:[&>button]:multi-[`bg-tertiary`]'
           )}
