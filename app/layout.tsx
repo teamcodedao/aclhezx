@@ -9,8 +9,8 @@ const anton = Anton({
 });
 
 export const metadata: Metadata = {
-  title: 'AcLhEzX',
-  description: 'Sey henlo two da CHZCEO FiRsT DeFlATiOnaRy MemEcOiN On CHZ',
+  title: 'Alexundre Dreyfus',
+  description: 'Sey hallo tu da ceo of Chiliz',
 };
 
 export default function RootLayout({
