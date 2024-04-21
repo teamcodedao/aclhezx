@@ -46,10 +46,19 @@ export default function Home() {
               <Hamburger />
             </div>
           </div>
-          <div className='lg: relative mt-10 flex md:mt-10 lg:mt-24'>
-            <div className='flex grow flex-col justify-center max-[555px]:multi-[`absolute;inset-0`]'>
-              <h1 className='text-7xl uppercase drop-shadow-normal md:text-8xl lg:text-9xl'>
-                {'AcLhEzX'.split('').map(word => (
+          <div className='lg: relative flex pt-10 md:pb-10 lg:pb-14 lg:pt-24'>
+            <hgroup className='flex grow flex-col justify-center max-[555px]:multi-[`absolute;inset-0`]'>
+              <h1 className='whitespace-nowrap text-7xl uppercase drop-shadow-normal md:text-8xl lg:text-9xl'>
+                {'Alexundre'.split('').map(word => (
+                  <span
+                    key={word}
+                    className='inline-block cursor-default transition hover:scale-110 hover:text-tertiary'
+                  >
+                    {word}
+                  </span>
+                ))}
+                <p className='h-[50px]'></p>
+                {'Dreyfus'.split('').map(word => (
                   <span
                     key={word}
                     className='inline-block cursor-default transition hover:scale-110 hover:text-tertiary'
@@ -58,12 +67,11 @@ export default function Home() {
                   </span>
                 ))}
               </h1>
-              <h4 className='lg: mt-8 space-y-2 text-2xl uppercase md:text-3xl lg:mt-10 lg:text-4xl'>
+              <h4 className='mt-8 space-y-2 text-2xl uppercase md:text-3xl lg:mt-10 lg:text-4xl'>
                 <p>Sey hallo tu da ceo of Chiliz</p>
-                <p>FiRsT DeFlATiOnaRy MemEcOiN On CHZ</p>
               </h4>
-            </div>
-            <div className='flex'>
+            </hgroup>
+            <div className='-mb-8 flex'>
               <div className='-mr-24 mt-5 flex flex-col justify-between'>
                 <Image src={doubleTriangleImg} quality={100} priority alt='' />
                 <Triangle className='!relative z-[-1] aspect-square w-[250px] -rotate-45' />
@@ -73,7 +81,7 @@ export default function Home() {
                 quality={100}
                 priority
                 alt=''
-                className='self-end'
+                className='max-w-[440px] self-end xl:scale-110'
               />
             </div>
           </div>
