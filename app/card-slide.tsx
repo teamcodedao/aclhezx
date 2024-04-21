@@ -15,7 +15,7 @@ export default function CardSlide({title, image, description}: CardSlideProps) {
         'flex flex-col overflow-hidden rounded-2xl border-[5px] border-black'
       )}
     >
-      <div className='border-b-[5px] border-black bg-secondary'>
+      <div className='hidden border-b-[5px] border-black bg-secondary'>
         <h1 className='px-2 py-3 text-center text-4xl uppercase'>{title}</h1>
       </div>
       <div className='grow bg-white p-4'>
@@ -28,7 +28,7 @@ export default function CardSlide({title, image, description}: CardSlideProps) {
             className='max-w-none scale-105 object-cover'
           />
         </div>
-        <div className='mt-5 max-w-full text-balance text-sm uppercase text-black'>
+        <div className='mt-5 hidden max-w-full text-balance text-sm uppercase text-black'>
           {description}
         </div>
       </div>

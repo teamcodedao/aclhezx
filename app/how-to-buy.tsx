@@ -19,8 +19,13 @@ export default function HowToBuy({className}: HowToBuyProps) {
 
   return (
     <section className={clsx(className)}>
-      <div className='mx-auto flex max-w-screen-desktop items-end justify-between gap-x-5 max-desktop:px-5'>
-        <h2 className='whitespace-nowrap text-center text-[2.7rem] uppercase drop-shadow-normal sm:text-5xl md:text-6xl lg:text-[4rem]'>
+      <div className='mx-auto flex items-end justify-end gap-x-5 px-5'>
+        <h2
+          className={clsx(
+            'whitespace-nowrap text-center text-[2.7rem] uppercase drop-shadow-normal sm:text-5xl md:text-6xl lg:text-[4rem]',
+            'hidden'
+          )}
+        >
           How to buy
         </h2>
         <div
