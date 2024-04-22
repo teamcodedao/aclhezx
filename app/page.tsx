@@ -113,8 +113,8 @@ export default function Home() {
       <ListedOn className='mt-10 lg:mt-16' />
       <section
         className={clsx(
-          'mx-auto mt-20 max-w-screen-desktop max-desktop:px-5 lg:mt-28',
-          'grid grid-cols-[repeat(auto-fill,minmax(var(--w),_1fr))] gap-x-5 gap-y-8 sm:gap-x-10 md:gap-y-14 lg:gap-x-20 lg:gap-y-32',
+          'mx-auto mt-20 max-w-screen-xl-desktop max-xl-desktop:px-5 lg:mt-28',
+          'grid grid-cols-[repeat(auto-fill,minmax(var(--w),_1fr))] gap-x-5 gap-y-20 sm:gap-x-10 md:gap-y-24 lg:gap-x-20 lg:gap-y-32',
           '[--w:350px] lg:[--w:430px]',
           'mixin/image:multi-[`flex;items-end`]',
           'max-[779px]:[&>*:nth-child(3)]:order-last'
@@ -135,7 +135,7 @@ export default function Home() {
             </div>
           }
           action={{
-            text: 'Supply: 100.000.000',
+            text: 'Supply: 8,888,888,888',
             className: 'mt-auto',
           }}
         />
@@ -146,7 +146,7 @@ export default function Home() {
             text: 'buy $DREYFUS',
             href: process.env.NEXT_PUBLIC_COIN_URL,
             target: '_buy',
-            className: 'mt-4 lg:mt-14',
+            className: 'mt-4 lg:mt-14 max-[779px]:multi-[`justify-center`]',
           }}
           className='mb-20 lg:mb-40'
         />
@@ -154,10 +154,7 @@ export default function Home() {
           <Image
             src={alex3Img}
             alt=''
-            className={clsx(
-              'w-full',
-              'origin-bottom-left min-[780px]:scale-[1.2] xl:scale-[1.3]'
-            )}
+            className={clsx('w-full', 'origin-bottom-left')}
           />
         </div>
       </section>

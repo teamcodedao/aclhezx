@@ -23,9 +23,10 @@ export default function Card({
     <article className={clsx(className, 'flex flex-col')}>
       <h3
         className={clsx(
-          'text-5xl uppercase !leading-normal drop-shadow-normal min-[390px]:text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl',
+          '-mt-10 text-5xl uppercase !leading-normal drop-shadow-normal min-[390px]:text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl',
+          'max-[779px]:multi-[`text-center;!text-8xl`]',
           {
-            'text-right max-[779px]:text-left': position === 'right',
+            'text-right': position === 'right',
           }
         )}
       >
@@ -35,7 +36,7 @@ export default function Card({
         className={clsx(
           'mb-5 mt-10 text-balance text-xl uppercase lg:mt-14 lg:text-2xl [&>*]:space-y-5 lg:[&>*]:space-y-10',
           {
-            'justify-end text-right max-[779px]:text-left':
+            'justify-end text-right max-[779px]:multi-[`text-center;!text-2xl`]':
               position === 'right',
           }
         )}
@@ -51,7 +52,7 @@ export default function Card({
           'xl:[&>*]-multi-[`text-[4rem]`]',
           'hover:[&>a]:multi-[`bg-tertiary;text-black`]',
           {
-            'justify-end max-[779px]:justify-start': position === 'right',
+            'justify-end max-[779px]:justify-center': position === 'right',
           }
         )}
       >

@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       screens: {
         desktop: '1185px',
+        'xl-desktop': '1440px',
       },
       colors: {
         primary: '#C20122',
@@ -21,9 +22,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    require('tailwindcss-multi'),
-    require('tailwindcss-mixins')
-  ],
+  plugins: [require('tailwindcss-multi'), require('tailwindcss-mixins')],
 };
 export default config;
