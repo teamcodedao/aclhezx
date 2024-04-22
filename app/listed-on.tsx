@@ -4,17 +4,19 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import Tilt from 'react-parallax-tilt';
 
+import Triangle from './triangle';
+
 import triangleImg from './triangle.svg';
 
 interface ListedOnProps extends React.ComponentProps<'section'> {}
 
 export default function ListedOn({className, ...rest}: ListedOnProps) {
   return (
-    <section {...rest} className={clsx(className, 'max-desktop:px-5')}>
+    <section {...rest} className={clsx(className, 'relative max-desktop:px-5')}>
       <h2 className='text-center text-5xl uppercase drop-shadow-normal md:text-6xl lg:text-[4rem]'>
         Listed On
       </h2>
-      <div className='mt-8 flex justify-center gap-x-5 sm:gap-x-10 lg:mt-12 lg:gap-x-20 max-[400px]:[&>*:first-child]:hidden max-sm:[&>*:last-child]:hidden'>
+      <div className='relative z-10 mt-8 flex justify-center gap-x-5 sm:gap-x-10 lg:mt-12 lg:gap-x-20 max-[400px]:[&>*:first-child]:hidden max-sm:[&>*:last-child]:hidden'>
         {Array.from({length: 3}).map((_, i) => (
           <Tilt
             key={i}
@@ -32,6 +34,7 @@ export default function ListedOn({className, ...rest}: ListedOnProps) {
           </Tilt>
         ))}
       </div>
+      <Triangle className='-right-48 -top-20 z-0 w-[620px] rotate-[120deg]' />
     </section>
   );
 }

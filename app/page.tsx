@@ -120,8 +120,9 @@ export default function Home() {
           'max-[779px]:[&>*:nth-child(3)]:order-last'
         )}
       >
-        <div className='mixin/image'>
-          <Image src={alex2Img} alt='' className='w-full' />
+        <div className='mixin/image relative'>
+          <Image src={alex2Img} alt='' className='z-10 w-full' />
+          <Triangle className='-bottom-32 -left-52 z-0 w-[620px] rotate-[120deg]' />
         </div>
         <Card
           title='tokenomic'
