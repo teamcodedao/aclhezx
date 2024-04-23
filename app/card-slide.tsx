@@ -12,13 +12,13 @@ export default function CardSlide({title, image, description}: CardSlideProps) {
     <div
       className={clsx(
         'embla__slide',
-        'flex flex-col overflow-hidden rounded-2xl border-[5px] border-black'
+        'flex flex-col overflow-hidden rounded-3xl border-[5px] border-black'
       )}
     >
       <div className='hidden border-b-[5px] border-black bg-secondary'>
         <h1 className='px-2 py-3 text-center text-4xl uppercase'>{title}</h1>
       </div>
-      <div className='grow bg-white p-4'>
+      <div className='grow bg-white px-5 py-4'>
         <div className='overflow-hidden rounded-2xl border-[3px] border-black'>
           <Image
             src={image}

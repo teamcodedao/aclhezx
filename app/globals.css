@@ -37,10 +37,12 @@ body {
     @apply overflow-hidden;
 
     .embla__container {
-      @apply grid gap-[var(--embla-gap,theme(spacing.5))] grid-flow-col;
+      @apply flex gap-[var(--embla-gap,theme(spacing.5))];
+      backface-visibility: hidden;
+      touch-action: pan-y;
 
       .embla__slide {
-        @apply w-fit;
+        @apply min-w-0 shrink-0;
       }
     }
   }
